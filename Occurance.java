@@ -1,40 +1,35 @@
-import java.util.Scanner;
+import java.util.HashMap;
 
-public class Occurance {
+class Occurrence
+{
+    static void characterCount(String inputString)
+    {
 
-        static final int MAX_CHAR = 256;
+        HashMap<Character, Integer> charCountMap = new HashMap<Character, Integer>();
 
-        static void getOccuringChar(String str)
+        char[] strArray = inputString.toCharArray();
+
+        for (char c : strArray)
         {
-            int count[] = new int[MAX_CHAR];
+            if(charCountMap.containsKey(c))
+            {
 
-            int len = str.length();
+                charCountMap.put(c, charCountMap.get(c)+1);
+            }
+            else
+            {
 
-            for (int i = 0; i < len; i++)
-                count[str.charAt(i)]++;
-
-            char ch[] = new char[str.length()];
-            for (int i = 0; i < len; i++) {
-                ch[i] = str.charAt(i);
-                int find = 0;
-                for (int j = 0; j <= i; j++) {
-
-
-                    if (str.charAt(i) == ch[j])
-                        find++;
-                }
-
-                if (find == 1)
-                    System.out.println("Number of Occurrence of " +
-                            str.charAt(i) + " is:" + count[str.charAt(i)]);
+                charCountMap.put(c, 1);
             }
         }
-        public static void main(String[] args)
-        {
-            Scanner sc = new Scanner(System.in);
-            String str = "suszkskkcloowppzpaasllalx";
-            getOccuringChar(str);
-        }
+
+        System.out.println(charCountMap);
     }
 
+    public static void main(String[] args)
+    {
+        characterCount("suszkskkcloowppzpaasllalx");
+
+    }
+}
 
