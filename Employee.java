@@ -1,4 +1,3 @@
-ackage Assignment;
 
 import java.util.Scanner;
 
