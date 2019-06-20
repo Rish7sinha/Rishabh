@@ -1,6 +1,6 @@
 package Sortbook;
 
-public class Sortnew implements Comparable<Sortnew> {
+public class Sortnew {
 
         private int BookId;
         private String BookName;
@@ -58,8 +58,4 @@ public class Sortnew implements Comparable<Sortnew> {
     }
 
 
-    @Override
-    public int compareTo(Sortnew o) {
-        return 0;
-    }
 }
