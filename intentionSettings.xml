@@ -1,5 +1,0 @@
-<application>
-  <component name="IntentionManagerSettings">
-    <ignoreAction name="Java/Strings/Replace + with StringBuilder.append()" />
-  </component>
-</application>
